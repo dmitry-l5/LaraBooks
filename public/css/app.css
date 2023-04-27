@@ -1,0 +1,41 @@
+#authors_target{
+    width: 100%;
+    min-height: 25px;
+    border: solid 1px gray;
+}
+#authors_target > *[role='authors_item']{
+    font-weight: bold;
+}
+#authors_holder{
+    min-width:100px;
+    min-height:100px; 
+    
+    border: solid 3px gray;
+
+}
+#authors_holder > *[role='authors_item']{
+    display: inline;
+    margin-left: 10px;
+}
+
+.delete_form{
+    width: 100%;
+    border: solid 1px gray;
+}
+.delete_form > *:nth-child(1) {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.delete_form > *:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.delete_form > *:nth-child(2) > *:first-child {
+}
+.delete_form > *:nth-child(2) > *:nth-last-child() {
+   margin-left: auto;
+    height: 25px;
+}
