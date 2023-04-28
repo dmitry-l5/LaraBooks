@@ -68,11 +68,13 @@ Route::post('/add_book', function(Request $request){
         $book = new books_list();
         $book->title = $request->title;
         $book->save();
-        foreach($request->authors as $key=>$value){
-            $link = new link();
-            $link->author_id = $key;
-            $link->book_id = $book->id;
-            $link->save(); 
+        if($request->authors){
+            foreach($request->authors as $key=>$value){
+                $link = new link();
+                $link->author_id = $key;
+                $link->book_id = $book->id;
+                $link->save(); 
+            }
         }
     }
     return redirect()->route('edit', ['full_name'=>'ОДИН']);
